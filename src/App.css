@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --alert-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2, h3, h4 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: rgb(247, 244, 244);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+button:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+.cart-checkout-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between; /* 保留这一行如果你想要在两个模块之间保持一定的空间 */
+  align-items: flex-start;
+  gap: 20px; /* 可以减小这个值来减少间隔 */
+  margin: 20px 0; /* 调整顶部和底部的间距 */
 }
 
-.App-link {
-  color: #61dafb;
+/* 确保 .cart-container 和 .checkout-container 的 max-width 不会太小 */
+.cart-container, .checkout-container {
+  flex: 1; /* 或者根据需要使用 'flex-basis' 来设置基本的尺寸 */
+  max-width: calc(50% - 10px); /* 调整这个值来使模块更靠近 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .cart-checkout-container {
+    flex-direction: column;
+    gap: 10px; /* 在移动视图中调整模块之间的间隔 */
   }
 }
+

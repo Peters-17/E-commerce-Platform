@@ -1,0 +1,68 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* 对齐到容器的起始位置 */
+    align-items: flex-start; /* 对齐到交叉轴的起始位置 */
+    margin-bottom: 20px; /* 在产品列表和按钮之间提供一些空间 */
+  }
+  
+  .product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product div {
+    padding: 10px;
+  }
+  
+  .product h3 {
+    margin-top: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product {
+      width: 100%;
+    }
+  }
+  .pagination-container {
+    width: 100%; /* 占满整行 */
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中按钮 */
+    margin-top: 20px; /* 在产品列表和按钮之间提供一些空间 */
+  }
+  .pagination-container button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #007bff; /* 一个蓝色的背景 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .pagination-container button:hover {
+    background-color: #0056b3; /* 鼠标悬停时的背景色 */
+    transform: translateY(-2px); /* 轻微的上移效果 */
+  }
+  
+  .pagination-container button:disabled {
+    background-color: #cccccc; /* 禁用时的背景色 */
+    cursor: not-allowed;
+  }
+  
