@@ -171,8 +171,7 @@ Haoyang Yuan - haoyangy2000@gmail.com
 ## Acknowledgements
 
 - [README Template](https://github.com/othneildrew/Best-README-Template)
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-- [React Icons](https://react-icons.github.io/react-icons/search)
+- [React]([https://react-icons.github.io/react-icons/search](https://react.dev/learn))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
