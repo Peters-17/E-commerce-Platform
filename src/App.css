@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --alert-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2, h3, h4 {
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: rgb(247, 244, 244);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+button:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
+.cart-checkout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.cart-container, .checkout-container {
+  flex: 1;
+  max-width: calc(50% - 10px);
+}
+
+@media (max-width: 768px) {
+  .cart-checkout-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

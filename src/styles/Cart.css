@@ -1,0 +1,60 @@
+/* Cart.css */
+.cart-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(214, 28, 28, 0.1);
+  }
+  
+  .cart-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .cart-item {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .cart-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item p {
+    margin: 5px 0;
+  }
+  
+  .cart-item button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-item button:hover {
+    background-color: #0056b3;
+  }
+  
+  .cart-empty {
+    text-align: center;
+    color: #1a0303;
+  }
+  
+  /* 如果需要，你可以添加媒体查询来处理不同屏幕尺寸的响应式设计 */
+  @media (max-width: 768px) {
+    .cart-container {
+      padding: 10px;
+    }
+  }
+  
