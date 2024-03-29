@@ -19,14 +19,22 @@ function App() {
     setResetPagination(prev => !prev);
   };
 
+  /**
+    The ... extension operator is used to safely update the list of items (cartItems) in the cart, 
+    either by increasing the number of existing products or by adding new products to the cart. 
+    Using the extension operator ensures that the original state (the prevItems array and any item objects) 
+    is not directly modified, which is an important principle of React state updates.
+  */
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const itemExists = prevItems.find((item) => item.id === product.id);
       if (itemExists) {
         return prevItems.map((item) =>
+        // Update the quantity of the item
           item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
+        // Add the product to the cart with a quantity of 1
         return [...prevItems, { ...product, quantity: 1 }];
       }
     });

@@ -5,11 +5,10 @@ const Checkout = ({ cartItems, clearCart }) => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
-    // 模拟订单处理逻辑
+    // Simulate order processing
     console.log("Processing order for: ", cartItems);
-    // 清空购物车
+    // Clear the cart after placing the order
     clearCart();
-    // 显示订单处理结果
     alert("Order has been placed successfully!");
   };
 

@@ -1,9 +1,9 @@
 .rating-container {
-    display: flex; /* 星星水平排列 */
-    align-items: center; /* 居中对齐 */
+    display: flex;
+    align-items: center;
   }
   
   .rating-star {
-    width: 30px; /* 或者你希望的任何尺寸 */
-    height: auto; /* 保持星星的宽高比 */
+    width: 30px;
+    height: auto;
   }

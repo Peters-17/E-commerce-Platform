@@ -8,11 +8,11 @@ const Search = ({ onSearch }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    // 假设这里调用API获取所有可用类别
+    // Fetch categories from API
     const fetchCategories = async () => {
       try {
         const response = await axios.get('https://dummyjson.com/products/categories');
-        setCategories(["All Categories", ...response.data]); // 在数组开头添加“All Categories”
+        setCategories(["All Categories", ...response.data]);
       } catch (error) {
         console.error('Error fetching categories:', error);
       }
@@ -22,7 +22,7 @@ const Search = ({ onSearch }) => {
   }, []);
 
   const handleSearch = () => {
-    // 如果选择了“All Categories”，则将category参数设置为空字符串
+    // Pass the search term and category to the parent component
     const searchCategory = category === "All Categories" ? "" : category;
     onSearch(searchTerm, searchCategory);
   };

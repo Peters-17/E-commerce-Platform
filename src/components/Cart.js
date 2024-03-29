@@ -8,8 +8,10 @@ export const Cart = ({ cartItems, setCartItems }) => {
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const changeQuantity = (productId, amount) => {
     setCartItems(cartItems.map(item => {
+      // Update the quantity of the item
       if(item.id === productId) {
         const updatedQuantity = item.quantity + amount;
+        // Return the updated item with the new quantity
         return { ...item, quantity: updatedQuantity >= 0 ? updatedQuantity : 0 };
       }
       return item;

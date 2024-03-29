@@ -11,15 +11,16 @@ export const ProductList = ({ searchTerm, searchCategory, addToCart, resetPagina
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchAllProducts();
-  }, [limit, skip, searchCategory, searchTerm]); // Add searchCategory and searchTerm as dependencies
+    fetchAllProducts(); 
+    // Add searchCategory and searchTerm as dependencies
+  }, [limit, skip, searchCategory, searchTerm]);
 
   useEffect(() => {
-    setSkip(0); // 每次resetPagination变化时重置页数
+    setSkip(0);
   }, [resetPagination]);
 
   const goToProductDetails = (id) => {
-    navigate(`/product/${id}`); // 导航到产品详情页面
+    navigate(`/product/${id}`);
   };
 
   const fetchAllProducts = async () => {
@@ -28,18 +29,16 @@ export const ProductList = ({ searchTerm, searchCategory, addToCart, resetPagina
       let url;
   
       if (searchCategory && searchCategory !== "All Categories") {
-        // 如果有指定类别，先获取该类别下的所有商品
+        // Fetch products by category
         url = `https://dummyjson.com/products/category/${encodeURIComponent(searchCategory)}`;
       } else {
-        // 如果没有指定类别，获取所有商品
-        url = `https://dummyjson.com/products?limit=0`; // 使用limit=0获取所有商品
+        // Fetch all products
+        url = `https://dummyjson.com/products?limit=0`;
       }
   
-      // 先获取类别下的所有商品
       let response = await axios.get(url);
       products = response.data.products || [];
-  
-      // 如果搜索词不为空，则进一步筛选包含搜索词的商品
+      // Filter products by search term
       if (searchTerm) {
         products = products.filter(product =>
           product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -47,10 +46,8 @@ export const ProductList = ({ searchTerm, searchCategory, addToCart, resetPagina
         );
       }
   
-      // 设置分页数据
       products = products.slice(skip, skip + limit);
-  
-      // 更新状态
+      // Update the products state
       setProducts(products);
       setFilteredProducts(products.length > 0 ? products : "Item not found");
     } catch (error) {

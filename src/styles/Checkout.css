@@ -22,16 +22,16 @@
   
   .order-item {
     padding: 10px;
-    border-bottom: 1px solid #ddd; /* 给列表项之间添加一条分割线 */
+    border-bottom: 1px solid #ddd;
   }
   
   .order-item:last-child {
-    border-bottom: none; /* 移除最后一项的分割线 */
+    border-bottom: none;
   }
   
   .order-item h4 {
     margin: 0 0 5px 0;
-    color: #007bff; /* 项目标题颜色 */
+    color: #007bff;
   }
   
   .order-item p {
@@ -39,7 +39,7 @@
   }
   
   .checkout-button {
-    display: block; /* 使按钮宽度填满容器 */
+    display: block;
     width: 100%;
     padding: 10px;
     background-color: #007bff;

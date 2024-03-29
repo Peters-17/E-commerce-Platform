@@ -1,15 +1,18 @@
 import React from 'react';
-import fullStarImg from '../images/Full.png'; // 全星图像路径
+import fullStarImg from '../images/Full.png';
 import halfStarImg from '../images/Half.png';
-import emptyStarImg from '../images/Empty.png'; // 空星图像路径
-import '../styles/RatingStars.css'; // 引入样式文件
+import emptyStarImg from '../images/Empty.png';
+import '../styles/RatingStars.css';
 
 const RatingStars = ({ rating }) => {
     const stars = [];
-    const maxRating = 5; // 最大评分值
-    const scorePerHalfStar = maxRating / (5 * 2); // 每半星的分数，这里是5个星星，每个星星2半星
-    const totalHalfStars = Math.round(rating / scorePerHalfStar); // 总共的半星数量
+    const maxRating = 5;
+    // Calculate the score per half star
+    const scorePerHalfStar = maxRating / (5 * 2);
+    // Calculate the total number of half stars
+    const totalHalfStars = Math.round(rating / scorePerHalfStar);
   
+    // Loop through the total number of stars
     for (let i = 0; i < 5; i++) {
         if (totalHalfStars > i * 2 + 1) {
           stars.push(<img src={fullStarImg} alt="Full Star" className="rating-star" key={i} />);
@@ -23,4 +26,4 @@ const RatingStars = ({ rating }) => {
       return <div className="rating-container">{stars}</div>;
 };
   
-export default RatingStars; // 导出RatingStars组件
+export default RatingStars;

@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start; /* 对齐到容器的起始位置 */
-    align-items: flex-start; /* 对齐到交叉轴的起始位置 */
-    margin-bottom: 20px; /* 在产品列表和按钮之间提供一些空间 */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
   }
   
   .product {
@@ -40,15 +40,15 @@
     }
   }
   .pagination-container {
-    width: 100%; /* 占满整行 */
-    display: flex; /* 使用 flex 布局 */
-    justify-content: center; /* 水平居中按钮 */
-    margin-top: 20px; /* 在产品列表和按钮之间提供一些空间 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
   }
   .pagination-container button {
     padding: 10px 15px;
     margin: 0 5px;
-    background-color: #007bff; /* 一个蓝色的背景 */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -57,12 +57,12 @@
   }
   
   .pagination-container button:hover {
-    background-color: #0056b3; /* 鼠标悬停时的背景色 */
-    transform: translateY(-2px); /* 轻微的上移效果 */
+    background-color: #0056b3;
+    transform: translateY(-2px);
   }
   
   .pagination-container button:disabled {
-    background-color: #cccccc; /* 禁用时的背景色 */
+    background-color: #cccccc;
     cursor: not-allowed;
   }
   
