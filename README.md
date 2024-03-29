@@ -50,10 +50,7 @@ This E-Commerce Platform is a React-based application designed to provide users 
 5. **Ratings System:**
    - The application visually represents product ratings with a star system, enhancing the presentation of product feedback received from users. This feature aids users in making informed purchasing decisions based on product popularity and quality.
 
-6. **Responsive Design:**
-   - The application is styled with CSS, ensuring a responsive design that adapts to various screen sizes and devices for a seamless shopping experience.
-
-7. **Modern Web Technologies:**
+6. **Modern Web Technologies:**
    - Built with React, the web showcases efficient state management and component-based architecture.
    - Axios is used for HTTP requests, fetching product data from dummy APIs: https://dummyjson.com/docs.
    - React Router facilitates navigation between different parts of the application without reloading the page.
