@@ -171,7 +171,7 @@ Haoyang Yuan - haoyangy2000@gmail.com
 ## Acknowledgements
 
 - [README Template](https://github.com/othneildrew/Best-README-Template)
-- [React]([https://react-icons.github.io/react-icons/search](https://react.dev/learn))
+- [React](https://react.dev/learn)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
