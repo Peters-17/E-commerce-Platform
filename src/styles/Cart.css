@@ -50,8 +50,7 @@
     text-align: center;
     color: #1a0303;
   }
-  
-  /* 如果需要，你可以添加媒体查询来处理不同屏幕尺寸的响应式设计 */
+
   @media (max-width: 768px) {
     .cart-container {
       padding: 10px;
